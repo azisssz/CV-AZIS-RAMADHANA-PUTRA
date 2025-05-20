@@ -1,0 +1,66 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+main section {
+  scroll-margin-top: 100px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid #0d6efd;
+  transition: 0.3s ease;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #ffc107 !important;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode main section {
+  background-color: #1e1e1e;
+}
+body.dark-mode .navbar,
+body.dark-mode footer {
+  background-color: #1f1f1f !important;
+}
+body.dark-mode .nav-link {
+  color: #ccc !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    margin-top: 10px;
+  }
+
+  @media print {
+  #toggle-theme,
+  #print-pdf,
+  .navbar,
+  footer {
+    display: none !important;
+  }
+}
+}
